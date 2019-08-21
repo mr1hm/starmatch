@@ -1,24 +1,135 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+} */
+
+header {
+  text-align: center;
+  line-height: 5rem;
+  margin-top: 0;
+  height: 75px;
+  background-color: white;
+  border: 2px solid black;
+  font-size: 50px;
 }
 
-.statsContainer {
-
+body {
+  background-image: url('../images/lfz-background.jpg');
+  background-size: cover;
 }
 
-.lfz-card {
-  background-image: url('../images/lfz-card.jpg');
-  width: 100px;
-  height: 100px;
-  border: 1px solid brown;
+aside {
+  text-align: center;
+  font-size: 22px;
+}
+
+.games-played,
+.games-played-count,
+.attempts,
+.attempts-count,
+.accuracy,
+.accuracy-count{
+  border: 1px solid black;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  width: 175px;
+  text-align: center;
+  line-height: 4.5rem;
+  background-color: lightblue;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 125px;
+  height: 150px;
+  border: 1px solid white;
 }
 
 .container {
   display: flex;
-  width: 600px;
-  height: 300px;
-  justify-content: center;
+  width: 800px;
+  height: 500px;
+  justify-content: space-around;
+  align-content: space-around;
   flex-wrap: wrap;
+  margin: 0 auto;
+  border: 2px solid black;
+  margin-top: 50px;
+  padding: 5px;
+}
+
+.statsContainer {
+  display: flex;
+  position: fixed;
+  top: 138px;
+  justify-content: center;
+  border: 2px solid black;
+  width: 200px;
+  height: 500px;
+}
+
+.css-logo,
+.docker-logo,
+.gitHub-logo,
+.html-logo,
+.js-logo,
+.mysql-logo,
+.node-logo,
+.php-logo,
+.react-logo {
+  width: 125px;
+  height: 150px;
+  background-position: center;
+  background-size: cover;
+}
+
+.lfz-card {
+  width: 125px;
+  height: 150px;
+  position: absolute;
+  background-image: url('../images/lfz-card.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.css-logo {
+  background-image: url('../images/css-logo.png');
+}
+
+.docker-logo {
+  background-image: url('../images/docker-logo.jpg');
+}
+
+.gitHub-logo {
+  background-image: url('../images/gitHub-logo.png');
+}
+
+.html-logo {
+  background-image: url('../images/html-logo.png');
+}
+
+.js-logo {
+  background-image: url('../images/js-logo.png');
+}
+
+.mysql-logo {
+  background-image: url('../images/mysql-logo.jpg');
+}
+
+.node-logo {
+  background-image: url('../images/node-logo.png');
+}
+
+.php-logo {
+  background-image: url('../images/php-logo.jpeg');
+}
+
+.react-logo {
+  background-image: url('../images/react-logo.png');
+}
+
+.hidden {
+  display: none;
 }
