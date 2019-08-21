@@ -12,11 +12,12 @@ header {
   background-color: white;
   border: 2px solid black;
   font-size: 50px;
+  position: relative;
 }
 
 body {
   background-image: url('../images/lfz-background.jpg');
-  background-size: cover;
+  background-size: auto;
 }
 
 aside {
@@ -32,8 +33,7 @@ aside {
 .accuracy-count{
   border: 1px solid black;
   height: 75px;
-  display: flex;
-  justify-content: center;
+  display: inline-block;
   width: 175px;
   text-align: center;
   line-height: 4.5rem;
@@ -47,24 +47,39 @@ aside {
   border: 1px solid white;
 }
 
+main {
+  /* display: flex; */
+  position: absolute;
+  /* justify-content: center; */
+  margin: 0 auto;
+  width: 800px;
+  top: 170px;
+  left: 275px;
+}
+
+.avoid-clicks {
+  pointer-events: none;
+}
+
 .container {
-  display: flex;
+  display: inline-flex;
+  /* position: relative; */
   width: 800px;
   height: 500px;
   justify-content: space-around;
   align-content: space-around;
   flex-wrap: wrap;
   margin: 0 auto;
-  border: 2px solid black;
-  margin-top: 50px;
+  border: 2px solid chartreuse;
   padding: 5px;
+  background-color: rgba(200, 0, 0, 0.4);
+  transition:
 }
 
 .statsContainer {
-  display: flex;
-  position: fixed;
-  top: 138px;
-  justify-content: center;
+  display: inline-block;
+  position: relative;
+  top: 75px;
   border: 2px solid black;
   width: 200px;
   height: 500px;
