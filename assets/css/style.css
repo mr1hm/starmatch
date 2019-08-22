@@ -73,7 +73,7 @@ main {
   border: 2px solid chartreuse;
   padding: 5px;
   background-color: rgba(0, 0, 0, 0.4);
-  transition:
+  /* transition: */
 }
 
 .statsContainer {

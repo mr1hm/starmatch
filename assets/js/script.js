@@ -3,7 +3,9 @@ $(document).ready(initializeApp);
 var firstCardClicked = null;
 var secondCardClicked = null;
 var matches = null;
-var max_matches = 2;
+var max_matches = 9;
+var attempts = 0;
+var games_played = 0;
 
 function initializeApp() {
   $('.lfz-card').click(handleCardClick);
@@ -18,6 +20,30 @@ function handleCardClick(event) {
   var target = $(event.currentTarget);
   $(target).addClass('hidden');
   cardsClicked();
+  // if (firstCardClicked.siblings().css('background-image') === secondCardClicked.siblings().css('background-image')) {
+  //   attempts++;
+  //   console.log(attempts);
+  //   displayStats();
+  // } else if (firstCardClicked.siblings().css('background-image') !== secondCardClicked.siblings().css('background-image')) {
+  //   attempts++;
+  //   console.log(attempts);
+  //   displayStats();
+  // } else if (matches === max_matches) {
+  //   games_played++;
+  //   displayStats();
+  // }
+}
+
+function calculateAccuracy() {
+  var percentage = matches / attempts;
+  return Math.round(percentage * 100) + '%';
+}
+
+function displayStats() {
+  var accuracyPercentage = calculateAccuracy();
+  $('.games-played-count').text(games_played);
+  $('.attempts-count').text(attempts);
+  $('.accuracy-percentage').text(accuracyPercentage);
 }
 
 function matchCheck() {
@@ -31,24 +57,29 @@ function cardsClicked() {
   var target = $(event.currentTarget);
   if (firstCardClicked === null) {
     firstCardClicked = target;
-  } else if (firstCardClicked) {
-    secondCardClicked = target;
+    return;
   }
+    secondCardClicked = target;
+
   if (firstCardClicked.siblings().css('background-image') === secondCardClicked.siblings().css('background-image')) {
     console.log('cards match');
     $('.lfz-card').addClass('avoid-clicks');
     $('.container').css('background-color', 'rgba(0, 200, 0, 0.4');
     matches++;
+    attempts++;
+    displayStats();
     firstCardClicked = null;
     secondCardClicked = null;
     matchCheck();
     setTimeout(function() {
       $('.lfz-card').removeClass('avoid-clicks');
       $('.container').css('background-color', 'rgba(0, 0, 0, 0.4');
-    }, 1500);
+    }, 500);
     } else if (firstCardClicked.siblings().css('background-image') !== secondCardClicked.siblings().css('background-image')) {
       $('.lfz-card').addClass('avoid-clicks');
       $('.container').css('background-color', 'rgba(200, 0, 0, 0.4');
+      attempts++;
+      displayStats();
       setTimeout(function () {
       firstCardClicked.removeClass('hidden');
       firstCardClicked = null;
@@ -56,7 +87,11 @@ function cardsClicked() {
       secondCardClicked = null;
       $('.lfz-card').removeClass('avoid-clicks');
       $('.container').css('background-color', 'rgba(0, 0, 0, 0.4');
-    }, 1500)
+    }, 500)
+  }
+  if (matches === max_matches) {
+    games_played++;
+    displayStats();
   }
   // IF TWO CARDS DON'T MATCH, YOU CAN FREELY CHECK OTHER CARDS, AND WHEN THEY MATCH, IT WILL KEEP THE UNMATCHED CARDS REVEALED!!
   // MAYBE WE CAN USE A clearTimeout FUNCTION HERE TO PREVENT CHEATING!!!
