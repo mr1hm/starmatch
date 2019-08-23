@@ -125,7 +125,7 @@ main {
   position: absolute;
   border: 1px solid white;
   /* z-index: 1; */
-  background-image: url('../images/myimages/sc-cardback.jpeg');
+  background-image: url('../images/myimages/sc2-logo.png');
   background-position: center;
   background-size: cover;
 }

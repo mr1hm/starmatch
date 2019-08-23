@@ -6,6 +6,10 @@ var matches = null;
 var max_matches = 9;
 var attempts = 0;
 var games_played = 0;
+var soundArray = [
+  'battlecruiser-sound.wav',
+  'battlecruiser2-sound.wav'
+]
 
 function initializeApp() {
   $('.sc-cardback').click(handleCardClick);
@@ -55,6 +59,7 @@ function cardsClicked() {
 
   if (firstCardClicked.siblings().css('background-image') === secondCardClicked.siblings().css('background-image')) {
     console.log('cards match');
+    console.log(firstCardClicked.siblings().css('background-image'));
     $('.sc-cardback').addClass('avoid-clicks');
     $('.container').css('background-color', 'rgba(0, 200, 0, 0.4');
     matches++;
@@ -98,10 +103,64 @@ function resetStats() {
 }
 
 function audioCue() {
-  var cardBack = document.getElementById('click-audio');
   $('.sc-cardback').click(function() {
-    cardBack.play();
-  })
+    playDing();
+    playCardAudio(this);
+  });
+
+  // $('.sc-cardback').click(function() {
+  //   if (target.siblings().css('background-image') === "url('file:///Users/kevinihm/lfz/memory_match/assets/images/myimages/battlecruiser.gif')") {
+  //     battlecruiserAudio.play();
+  //   }
+}
+
+function playDing(){
+  var clickAudio = new Audio('assets/sound/click-sound.wav');
+  clickAudio.play();
+}
+
+function playCardAudio(clickedDiv) {
+  var cardTarget = $(clickedDiv).attr('data-type');
+  console.log(cardTarget);
+  switch (cardTarget) {
+    case 'battlecruiser':
+      var battlecruiser = new Audio('assets/sound/battlecruiser-sound.wav');
+      battlecruiser.play();
+      if (matches++)
+      break;
+    case 'firebat':
+      var firebat = new Audio('assets/sound/firebat-sound.wav');
+      firebat.play();
+      break;
+    case 'ghost':
+      var ghost = new Audio('assets/sound/ghost-sound.wav');
+      ghost.play();
+      break;
+    case 'marauder':
+      var marauder = new Audio('assets/sound/marauder-sound.mp3');
+      marauder.play();
+      break;
+    case 'marine':
+      var marine = new Audio('assets/sound/marine-sound.mp3');
+      marine.play();
+      break;
+    case 'medivac':
+      var medivac = new Audio('assets/sound/medivac-sound.mp3');
+      medivac.play();
+      break;
+    case 'reaper':
+      var reaper = new Audio('assets/sound/reaper-sound.mp3');
+      reaper.play();
+      break;
+    case 'tank':
+      var tank = new Audio('assets/sound/tank-sound.mp3');
+      tank.play();
+      break;
+    case 'thor':
+      var thor = new Audio('assets/sound/thor-sound.wav');
+      thor.play();
+      break;
+  }
 }
 
 // function make_guess4() {
