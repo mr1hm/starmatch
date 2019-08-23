@@ -8,10 +8,10 @@ var attempts = 0;
 var games_played = 0;
 
 function initializeApp() {
-  $('.lfz-card').click(handleCardClick);
+  $('.sc-cardback').click(handleCardClick);
   $('.modal-button').click(function () {
     $('.modal').addClass('hidden');
-    $('.lfz-card').removeClass('hidden');
+    $('.sc-cardback').removeClass('hidden');
     $('.container').removeClass('avoid-clicks');
     $('.attempts-count').text(0);
     $('.accuracy-percentage').text(0);
@@ -53,7 +53,7 @@ function cardsClicked() {
 
   if (firstCardClicked.siblings().css('background-image') === secondCardClicked.siblings().css('background-image')) {
     console.log('cards match');
-    $('.lfz-card').addClass('avoid-clicks');
+    $('.sc-cardback').addClass('avoid-clicks');
     $('.container').css('background-color', 'rgba(0, 200, 0, 0.4');
     matches++;
     attempts++;
@@ -62,11 +62,11 @@ function cardsClicked() {
     secondCardClicked = null;
     matchCheck();
     setTimeout(function() {
-      $('.lfz-card').removeClass('avoid-clicks');
+      $('.sc-cardback').removeClass('avoid-clicks');
       $('.container').css('background-color', 'rgba(0, 0, 0, 0.4');
-    }, 250);
+    }, 750);
     } else if (firstCardClicked.siblings().css('background-image') !== secondCardClicked.siblings().css('background-image')) {
-      $('.lfz-card').addClass('avoid-clicks');
+      $('.sc-cardback').addClass('avoid-clicks');
       $('.container').css('background-color', 'rgba(200, 0, 0, 0.4');
       attempts++;
       displayStats();
@@ -75,9 +75,9 @@ function cardsClicked() {
       firstCardClicked = null;
       secondCardClicked.removeClass('hidden');
       secondCardClicked = null;
-      $('.lfz-card').removeClass('avoid-clicks');
+      $('.sc-cardback').removeClass('avoid-clicks');
       $('.container').css('background-color', 'rgba(0, 0, 0, 0.4');
-    }, 250)
+    }, 750)
   }
   if (matches === max_matches) {
     games_played++;
