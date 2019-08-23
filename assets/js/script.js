@@ -13,6 +13,8 @@ function initializeApp() {
     $('.modal').addClass('hidden');
     $('.lfz-card').removeClass('hidden');
     $('.container').removeClass('avoid-clicks');
+    $('.attempts-count').text(0);
+    $('.accuracy-percentage').text(0);
   })
 }
 
@@ -20,18 +22,6 @@ function handleCardClick(event) {
   var target = $(event.currentTarget);
   $(target).addClass('hidden');
   cardsClicked();
-  // if (firstCardClicked.siblings().css('background-image') === secondCardClicked.siblings().css('background-image')) {
-  //   attempts++;
-  //   console.log(attempts);
-  //   displayStats();
-  // } else if (firstCardClicked.siblings().css('background-image') !== secondCardClicked.siblings().css('background-image')) {
-  //   attempts++;
-  //   console.log(attempts);
-  //   displayStats();
-  // } else if (matches === max_matches) {
-  //   games_played++;
-  //   displayStats();
-  // }
 }
 
 function calculateAccuracy() {
@@ -74,7 +64,7 @@ function cardsClicked() {
     setTimeout(function() {
       $('.lfz-card').removeClass('avoid-clicks');
       $('.container').css('background-color', 'rgba(0, 0, 0, 0.4');
-    }, 500);
+    }, 250);
     } else if (firstCardClicked.siblings().css('background-image') !== secondCardClicked.siblings().css('background-image')) {
       $('.lfz-card').addClass('avoid-clicks');
       $('.container').css('background-color', 'rgba(200, 0, 0, 0.4');
@@ -87,14 +77,20 @@ function cardsClicked() {
       secondCardClicked = null;
       $('.lfz-card').removeClass('avoid-clicks');
       $('.container').css('background-color', 'rgba(0, 0, 0, 0.4');
-    }, 500)
+    }, 250)
   }
   if (matches === max_matches) {
     games_played++;
     displayStats();
+    resetStats();
   }
   // IF TWO CARDS DON'T MATCH, YOU CAN FREELY CHECK OTHER CARDS, AND WHEN THEY MATCH, IT WILL KEEP THE UNMATCHED CARDS REVEALED!!
   // MAYBE WE CAN USE A clearTimeout FUNCTION HERE TO PREVENT CHEATING!!!
   // INSTEAD OF A clearTimeout, I ended up adding a class called avoid-clicks and using (pointer events: none) in CSS.
     // This will prevent any pointer events such as clicks to not register.
+}
+
+function resetStats() {
+  matches = null;
+  attempts = null;
 }
