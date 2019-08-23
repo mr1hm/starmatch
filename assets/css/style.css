@@ -32,6 +32,7 @@ aside {
 .attempts-count,
 .accuracy,
 .accuracy-count{
+  border-radius: 5px;
   border: 1px solid black;
   height: 75px;
   display: inline-flex;
@@ -40,6 +41,7 @@ aside {
   text-align: center;
   line-height: 4.5rem;
   background-color: lightblue;
+  margin-bottom: 2px;
 }
 
 .card {
@@ -81,6 +83,8 @@ main {
 .statsContainer {
   display: inline-flex;
   position: relative;
+  align-content: space-between;
+  border-radius: 5px;
   top: 75px;
   border: 2px solid rgba(75, 158, 212, 0.6);
   width: 200px;
