@@ -12,6 +12,7 @@ function initializeApp() {
   $('.modal-button').click(function () {
     $('.modal').addClass('hidden');
     $('.sc-cardback').removeClass('hidden');
+    $('.sc-cardback').addClass('visible');
     $('.container').removeClass('avoid-clicks');
     $('.attempts-count').text(0);
     $('.accuracy-percentage').text(0);
@@ -64,7 +65,7 @@ function cardsClicked() {
     setTimeout(function() {
       $('.sc-cardback').removeClass('avoid-clicks');
       $('.container').css('background-color', 'rgba(0, 0, 0, 0.4');
-    }, 750);
+    }, 1500);
     } else if (firstCardClicked.siblings().css('background-image') !== secondCardClicked.siblings().css('background-image')) {
       $('.sc-cardback').addClass('avoid-clicks');
       $('.container').css('background-color', 'rgba(200, 0, 0, 0.4');
@@ -77,7 +78,7 @@ function cardsClicked() {
       secondCardClicked = null;
       $('.sc-cardback').removeClass('avoid-clicks');
       $('.container').css('background-color', 'rgba(0, 0, 0, 0.4');
-    }, 750)
+    }, 1500)
   }
   if (matches === max_matches) {
     games_played++;

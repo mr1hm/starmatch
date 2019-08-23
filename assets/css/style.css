@@ -48,7 +48,7 @@ aside {
   box-sizing: border-box;
   width: 125px;
   height: 150px;
-  border: 1px solid white;
+  border: 1px solid rgba(75, 158, 212, 0.6);
 }
 
 main {
@@ -77,6 +77,7 @@ main {
   border: 2px solid rgba(75, 158, 212, 0.6);
   padding: 5px;
   background-color: rgba(0, 0, 0, 0.4);
+  transition: background-color 1.5s;
   /* transition: */
 }
 
@@ -122,6 +123,7 @@ main {
   width: 125px;
   height: 150px;
   position: absolute;
+  border: 1px solid white;
   /* z-index: 1; */
   background-image: url('../images/myimages/sc-cardback.jpeg');
   background-position: center;
@@ -165,5 +167,14 @@ main {
 }
 
 .hidden {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+   transition: visibility 0s 0.5s, opacity 0.75s linear; */
+  /* display: none; */
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s linear;
 }
