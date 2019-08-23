@@ -6,18 +6,19 @@
 
 header {
   text-align: center;
+  color: rgb(151, 150, 150);
   line-height: 5rem;
   margin-top: 0;
   height: 75px;
-  background-color: white;
-  border: 2px solid black;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(75, 158, 212, 0.6);
   font-size: 50px;
   position: relative;
 }
 
 body {
-  background-image: url('../images/lfz-background.jpg');
-  background-size: auto;
+  background-image: url('../images/myimages/starcraft2background.jpg');
+  background-size: cover;
 }
 
 aside {
@@ -71,7 +72,7 @@ main {
   align-content: space-around;
   flex-wrap: wrap;
   margin: 0 auto;
-  border: 2px solid chartreuse;
+  border: 2px solid rgba(75, 158, 212, 0.6);
   padding: 5px;
   background-color: rgba(0, 0, 0, 0.4);
   /* transition: */
@@ -81,20 +82,20 @@ main {
   display: inline-flex;
   position: relative;
   top: 75px;
-  border: 2px solid black;
+  border: 2px solid rgba(75, 158, 212, 0.6);
   width: 200px;
   height: 500px;
 }
 
-.css-logo,
-.docker-logo,
-.gitHub-logo,
-.html-logo,
-.js-logo,
-.mysql-logo,
-.node-logo,
-.php-logo,
-.react-logo {
+.battlecruiser,
+.firebat,
+.ghost,
+.marauder,
+.marine,
+.medivac,
+.reaper,
+.tank,
+.thor {
   width: 125px;
   height: 150px;
   background-position: center;

@@ -64,7 +64,7 @@ function cardsClicked() {
     setTimeout(function() {
       $('.lfz-card').removeClass('avoid-clicks');
       $('.container').css('background-color', 'rgba(0, 0, 0, 0.4');
-    }, 250);
+    }, 750);
     } else if (firstCardClicked.siblings().css('background-image') !== secondCardClicked.siblings().css('background-image')) {
       $('.lfz-card').addClass('avoid-clicks');
       $('.container').css('background-color', 'rgba(200, 0, 0, 0.4');
@@ -77,7 +77,7 @@ function cardsClicked() {
       secondCardClicked = null;
       $('.lfz-card').removeClass('avoid-clicks');
       $('.container').css('background-color', 'rgba(0, 0, 0, 0.4');
-    }, 250)
+    }, 750)
   }
   if (matches === max_matches) {
     games_played++;
