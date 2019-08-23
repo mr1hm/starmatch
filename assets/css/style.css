@@ -118,12 +118,12 @@ main {
   text-align: center;
 }
 
-.lfz-card {
+.sc-cardback {
   width: 125px;
   height: 150px;
   position: absolute;
   /* z-index: 1; */
-  background-image: url('../images/lfz-card.jpg');
+  background-image: url('../images/myimages/sc-cardback.jpeg');
   background-position: center;
   background-size: cover;
 }
