@@ -17,6 +17,7 @@ function initializeApp() {
     $('.attempts-count').text(0);
     $('.accuracy-percentage').text(0);
   })
+  audioCue();
 }
 
 function handleCardClick(event) {
@@ -95,3 +96,21 @@ function resetStats() {
   matches = null;
   attempts = null;
 }
+
+function audioCue() {
+  var cardBack = document.getElementById('click-audio');
+  $('.sc-cardback').click(function() {
+    cardBack.play();
+  })
+}
+
+// function make_guess4() {
+//   var the_guess4 = $('#guess_input4').val();
+//   var youGuessedItRightImg = "<img src='./scaryimage.jpg'>";
+//   var audio = new Audio("aaaah.wav");
+//     else if (the_guess4 == the_number4) {
+//     $('body').html(youGuessedItRightImg);
+//     audio.play();
+//     $('#responsive_div4').text('You Guessed it');
+//   }
+// }
