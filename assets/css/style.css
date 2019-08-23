@@ -123,40 +123,40 @@ main {
   background-size: cover;
 }
 
-.css-logo {
-  background-image: url('../images/css-logo.png');
+.battlecruiser {
+  background-image: url('../images/myimages/battlecruiser.gif');
 }
 
-.docker-logo {
-  background-image: url('../images/docker-logo.jpg');
+.firebat {
+  background-image: url('../images/myimages/firebat.gif');
 }
 
-.gitHub-logo {
-  background-image: url('../images/gitHub-logo.png');
+.ghost {
+  background-image: url('../images/myimages/ghost.gif');
 }
 
-.html-logo {
-  background-image: url('../images/html-logo.png');
+.marauder {
+  background-image: url('../images/myimages/marauder.gif');
 }
 
-.js-logo {
-  background-image: url('../images/js-logo.png');
+.marine {
+  background-image: url('../images/myimages/marine.gif');
 }
 
-.mysql-logo {
-  background-image: url('../images/mysql-logo.jpg');
+.medivac {
+  background-image: url('../images/myimages/medivac.gif');
 }
 
-.node-logo {
-  background-image: url('../images/node-logo.png');
+.reaper {
+  background-image: url('../images/myimages/reaper.gif');
 }
 
-.php-logo {
-  background-image: url('../images/php-logo.jpeg');
+.tank {
+  background-image: url('../images/myimages/tank.gif');
 }
 
-.react-logo {
-  background-image: url('../images/react-logo.png');
+.thor {
+  background-image: url('../images/myimages/thor.gif');
 }
 
 .hidden {
