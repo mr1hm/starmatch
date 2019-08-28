@@ -7,8 +7,10 @@ var max_matches = 9;
 var attempts = 0;
 var games_played = 0;
 var isItAMatch = false;
+var shuffleArray = [];
 
 function initializeApp() {
+  shuffleCards();
   $('.sc-cardback').click(handleCardClick);
   $('.modal-button').click(function () {
     $('.modal').addClass('hidden');
@@ -54,11 +56,10 @@ function cardsClicked() {
     firstCardClicked = target;
     return;
   }
-    secondCardClicked = target;
 
-  if (firstCardClicked.siblings().css('background-image') === secondCardClicked.siblings().css('background-image')) {
-    console.log('cards match');
-    console.log(firstCardClicked.siblings().css('background-image'));
+  secondCardClicked = target;
+  if (firstCardClicked.siblings().css('background-image') === secondCardClicked.siblings().css('background-image') && firstCardClicked.parent().get(0) !== secondCardClicked.parent().get(0)) {
+    console.log(firstCardClicked.parent().get(0), secondCardClicked.parent().get(0), firstCardClicked.parent().get(0) !== secondCardClicked.parent().get(0));
     $('.sc-cardback').addClass('avoid-clicks');
     $('.container').css('background-color', 'rgba(75, 140, 212, 0.6)');
     matches++;
@@ -72,7 +73,7 @@ function cardsClicked() {
       $('.sc-cardback').removeClass('avoid-clicks');
       $('.container').css('background-color', 'rgba(0, 0, 0, 0.4');
       isItAMatch = false;
-    }, 1500);
+    }, 2000);
     } else if (firstCardClicked.siblings().css('background-image') !== secondCardClicked.siblings().css('background-image')) {
       $('.sc-cardback').addClass('avoid-clicks');
       $('.container').css('background-color', 'rgba(200, 0, 0, 0.4');
@@ -85,7 +86,7 @@ function cardsClicked() {
       secondCardClicked = null;
       $('.sc-cardback').removeClass('avoid-clicks');
       $('.container').css('background-color', 'rgba(0, 0, 0, 0.4');
-    }, 1500)
+    }, 2000)
   }
   if (matches === max_matches) {
     games_played++;
@@ -119,7 +120,6 @@ function playDing(){
 
 function playCardAudio(clickedDiv) {
   var cardTarget = $(clickedDiv).attr('data-type');
-  console.log(cardTarget);
   if (isItAMatch) {
     var targetSound2 = new Audio(`assets/sound/${cardTarget}2.wav`);
     targetSound2.play();
@@ -129,14 +129,19 @@ function playCardAudio(clickedDiv) {
   }
 }
 
-// function shuffleCards(){
-//   for (var i = 0; i < 18; i++){
-//     var randomNum = Math.floor(Math.random() * 18);
-//     if ($('.card').index() !== randomNum) {
-//       $('.card').index(randomNum)
-//     } else {
-//       $('.card').index()
-//     }
+function shuffleCards(){
+  for (var i = 0; i < 18; i++){
+    var card = $('.card#' + i).get(0);
+    shuffleArray.push(card);
+    $('div#' + i).remove();
+  }
+  for (var shuffleArrayIndex = 0; shuffleArrayIndex < 18; shuffleArrayIndex++) {
+    var randomNum = Math.floor(Math.random() * shuffleArray.length);
+    $('.container').append(shuffleArray[randomNum]);
+    shuffleArray.splice(randomNum, 1);
+  }
+}
+//   for (var i = 0; i < shuffleArray.length; i++) {
 
 //   }
 // }
