@@ -1,1 +1,215 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
 
+.sc-cardback:hover {
+  color: #fdec6e;
+  text-shadow:0px 0px 30px #fdec6e;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+header {
+  text-align: center;
+  color: rgb(151, 150, 150);
+  line-height: 5rem;
+  margin-top: 0;
+  height: 75px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(75, 158, 212, 0.6);
+  font-size: 50px;
+  position: relative;
+}
+
+body {
+  background-image: url('../images/myimages/starcraft2background.jpg');
+  background-size: cover;
+}
+
+aside {
+  text-align: center;
+  font-size: 22px;
+}
+
+.timer {
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 50px;
+  border: 1px dotted rgba(75, 158, 212, 0.6);
+  border-radius: 5px;
+  margin-left: 60vw;
+}
+
+.timer-main {
+  background-color: rgba(90, 200, 0, 0.8);
+  display: flex;
+  position: static;
+  height: 25px;
+  width: 400px;
+  border: 1px solid rgba(75, 158, 212, 0.6);
+  border-radius: 5px;
+}
+
+.games-played,
+.games-played-count,
+.attempts,
+.attempts-count,
+.accuracy,
+.accuracy-percentage {
+  color: black;
+  border-radius: 5px;
+  border: 1px solid black;
+  height: 75px;
+  display: inline-flex;
+  justify-content: center;
+  width: 175px;
+  text-align: center;
+  line-height: 4.5rem;
+  background-color: lightblue;
+  margin-bottom: 2px;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 125px;
+  height: 150px;
+  border: 1px solid rgba(75, 158, 212, 0.6);
+}
+
+main {
+  /* display: flex; */
+  position: absolute;
+  /* justify-content: center; */
+  margin: 0 auto;
+  width: 800px;
+  top: 170px;
+  left: 275px;
+}
+
+.avoid-clicks {
+  pointer-events: none;
+}
+
+.container {
+  display: inline-flex;
+  /* position: relative; */
+  width: 800px;
+  height: 500px;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  border: 2px solid rgba(75, 158, 212, 0.6);
+  padding: 5px;
+  background-color:rgba(0, 0, 0, 0.4);
+  transition: background-color 1.5s;
+  /* transition: */
+}
+
+.statsContainer {
+  color: whitesmoke;
+  display: inline-flex;
+  position: relative;
+  align-content: space-between;
+  border-radius: 5px;
+  top: 25px;
+  border: 2px solid rgba(75, 158, 212, 0.6);
+  width: 200px;
+  height: 500px;
+}
+
+.battlecruiser,
+.firebat,
+.ghost,
+.marauder,
+.marine,
+.medivac,
+.reaper,
+.tank,
+.thor {
+  width: 125px;
+  height: 150px;
+  background-position: center;
+  background-size: cover;
+}
+
+.modal {
+  z-index: 1;
+  position: absolute;
+  border: 2px solid black;
+  width: 400px;
+  height: 400px;
+  left: 40%;
+  top: 25%;
+  background-image: url('../images/myimages/nuclear-background.jpg');
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+
+.sc-cardback {
+  width: 125px;
+  height: 150px;
+  position: absolute;
+  border: 1px solid white;
+  /* z-index: 1; */
+  background-image: url('../images/myimages/sc2-logo.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.battlecruiser {
+  background-image: url('../images/myimages/battlecruiser.gif');
+}
+
+.firebat {
+  background-image: url('../images/myimages/firebat.gif');
+}
+
+.ghost {
+  background-image: url('../images/myimages/ghost.gif');
+}
+
+.marauder {
+  background-image: url('../images/myimages/marauder.gif');
+}
+
+.marine {
+  background-image: url('../images/myimages/marine.gif');
+}
+
+.medivac {
+  background-image: url('../images/myimages/medivac.gif');
+}
+
+.reaper {
+  background-image: url('../images/myimages/reaper.gif');
+}
+
+.tank {
+  background-image: url('../images/myimages/tank.gif');
+}
+
+.thor {
+  background-image: url('../images/myimages/thor.gif');
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 1s 1.5s, opacity 0.75s linear;
+  /* display: none; */
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s linear;
+}
