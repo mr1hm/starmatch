@@ -15,7 +15,7 @@
 
 header {
   text-align: center;
-  color: rgb(151, 150, 150);
+  color: rgba(255, 246, 246, 0.9);
   line-height: 5rem;
   margin-top: 0;
   height: 75px;
@@ -42,7 +42,7 @@ aside {
   align-items: center;
   justify-content: flex-end;
   height: 50px;
-  border: 1px dotted rgba(75, 158, 212, 0.6);
+  /* border: 1px dotted rgba(75, 158, 212, 0.6); */
   border-radius: 5px;
   margin-left: 60vw;
 }
@@ -100,6 +100,8 @@ main {
 .container {
   display: inline-flex;
   /* position: relative; */
+  left: 50%;
+  transform: translate(25%);
   width: 800px;
   height: 500px;
   justify-content: space-around;
