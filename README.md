@@ -8,6 +8,8 @@ StarMatch
 
 - JavaScript
 - jQuery
+- HTML
+- CSS
 
 ## Features
 
