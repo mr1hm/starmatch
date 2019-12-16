@@ -1,5 +1,5 @@
 # StarCraft II Memory Match Game
-[StarMatch](starmatch.kevinihm.com "StarMatch")
+[StarMatch](http://starmatch.kevinihm.com "StarMatch")
 
 ## Features
 
