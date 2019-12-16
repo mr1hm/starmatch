@@ -1,5 +1,13 @@
-# StarCraft II Memory Match Game
+StarMatch 
+======
+
+- A StarCraft II Memory Match Game
 [StarMatch](http://starmatch.kevinihm.com "StarMatch")
+
+## Languages Used
+
+- JavaScript
+- jQuery
 
 ## Features
 
