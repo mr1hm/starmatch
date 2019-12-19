@@ -27,17 +27,18 @@ header {
   border: 2px solid rgba(75, 158, 212, 0.6);
   font-size: 50px;
   position: relative;
+  width: 100%;
 }
 
-body {
+/* body {
   background-image: url('../images/myimages/sc2background.jpg');
   background-size: cover;
-}
+} */
 
-aside {
+/* aside {
   text-align: center;
   font-size: 22px;
-}
+} */
 
 .timer {
   color: whitesmoke;
