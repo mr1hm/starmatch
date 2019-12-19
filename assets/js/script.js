@@ -16,7 +16,7 @@ function initializeApp() {
     $('.modal').addClass('hidden');
     $('.sc-cardback').removeClass('hidden');
     $('.sc-cardback').addClass('visible');
-    $('.container').removeClass('avoid-clicks');
+    $('.game-container').removeClass('avoid-clicks');
     $('.attempts-count').text(0);
     $('.accuracy-percentage').text(0);
   })
@@ -46,7 +46,7 @@ function displayStats() {
 function matchCheck() {
   if (matches === max_matches) {
     $('.modal').removeClass('hidden');
-    $('.container').addClass('avoid-clicks');
+    $('.game-container').addClass('avoid-clicks');
   }
 }
 
@@ -61,7 +61,7 @@ function cardsClicked() {
   if (firstCardClicked.siblings().css('background-image') === secondCardClicked.siblings().css('background-image') && firstCardClicked.parent().get(0) !== secondCardClicked.parent().get(0)) {
     console.log(firstCardClicked.parent().get(0), secondCardClicked.parent().get(0), firstCardClicked.parent().get(0) !== secondCardClicked.parent().get(0));
     $('.sc-cardback').addClass('avoid-clicks');
-    $('.container').css('background-color', 'rgba(75, 140, 212, 0.6)');
+    $('.game-container').css('background-color', 'rgba(75, 140, 212, 0.6)');
     matches++;
     attempts++;
     isItAMatch = true;
@@ -71,12 +71,12 @@ function cardsClicked() {
     matchCheck();
     setTimeout(function() {
       $('.sc-cardback').removeClass('avoid-clicks');
-      $('.container').css('background-color', 'rgba(0, 0, 0, 0.4');
+      $('.game-container').css('background-color', 'rgba(0, 0, 0, 0.4');
       isItAMatch = false;
     }, 2000);
     } else if (firstCardClicked.siblings().css('background-image') !== secondCardClicked.siblings().css('background-image')) {
       $('.sc-cardback').addClass('avoid-clicks');
-      $('.container').css('background-color', 'rgba(200, 0, 0, 0.4');
+      $('.game-container').css('background-color', 'rgba(200, 0, 0, 0.4');
       attempts++;
       displayStats();
       setTimeout(function () {
@@ -85,7 +85,7 @@ function cardsClicked() {
       secondCardClicked.removeClass('hidden');
       secondCardClicked = null;
       $('.sc-cardback').removeClass('avoid-clicks');
-      $('.container').css('background-color', 'rgba(0, 0, 0, 0.4');
+      $('.game-container').css('background-color', 'rgba(0, 0, 0, 0.4');
     }, 2000)
   }
   if (matches === max_matches) {
@@ -137,7 +137,7 @@ function shuffleCards(){
   }
   for (var shuffleArrayIndex = 0; shuffleArrayIndex < 18; shuffleArrayIndex++) {
     var randomNum = Math.floor(Math.random() * shuffleArray.length);
-    $('.container').append(shuffleArray[randomNum]);
+    $('.game-container').append(shuffleArray[randomNum]);
     shuffleArray.splice(randomNum, 1);
   }
 }
