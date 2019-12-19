@@ -150,7 +150,7 @@ header {
 }
 
 .modal {
-  z-index: 1;
+  z-index: 3;
   position: absolute;
   border: 2px solid black;
   width: 400px;
@@ -168,7 +168,7 @@ header {
   height: 150px;
   position: absolute;
   border: 1px solid white;
-  /* z-index: 1; */
+  z-index: 1;
   background-image: url('../images/myimages/sc2-logo.png');
   background-position: center;
   background-size: cover;
@@ -221,4 +221,209 @@ header {
   visibility: visible;
   opacity: 1;
   transition: opacity 0.5s linear;
+}
+
+/*-------------------------------------------------------------------
+
+                        10. RESPONSIVE
+
+-------------------------------------------------------------------*/
+
+@media (max-width: 667px) and (orientation: landscape) {
+  html, body {
+    height: 100%;
+  }
+  .statsSections {
+    height: 100%;
+  }
+  .parent-container {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100%;
+    /* overflow: hidden; */
+  }
+  .modal {
+    z-index: 9;
+    position: absolute;
+    border: 2px solid black;
+    width: 250px;
+    height: 250px;
+    background-image: url('../images/myimages/nuclear-background.jpg');
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+  }
+  .game-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .statsContainer {
+    top: 0px;
+  }
+  .main-stats {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .timer {
+    font-size: 12px;
+    align-content: flex-start;
+  }
+  .timer-main {
+    height: 15px;
+    width: 200px;
+  }
+  .timer-container {
+    height: 49px;
+    z-index: 2;
+  }
+  .headerTitle {
+    font-size: 26px;
+  }
+  .sc-cardback {
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+    z-index: 1;
+    background-image: url('../images/myimages/sc2-logo.png');
+    background-position: center;
+    background-size: cover;
+    right: 0%;
+  }
+  .card {
+    padding: 0;
+    box-sizing: border-box;
+    width: 50px;
+    height: 75px;
+    border: 1px solid rgba(75, 158, 212, 0.6);
+  }
+  .battlecruiser,
+  .firebat,
+  .ghost,
+  .marauder,
+  .marine,
+  .medivac,
+  .reaper,
+  .tank,
+  .thor {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+  .games-played,
+  .games-played-count,
+  .attempts,
+  .attempts-count,
+  .accuracy,
+  .accuracy-percentage {
+    color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: lightblue;
+    font-size: 12px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 568px) and (orientation: landscape) {
+   html, body {
+     height: 100%;
+   }
+  .parent-container {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100%;
+    /* height: 100vh;
+    width: 100vw; */
+  }
+  .modal {
+    z-index: 9;
+    position: absolute;
+    border: 2px solid black;
+    width: 250px;
+    height: 250px;
+    /* left: 40%;
+    top: 25%; */
+    background-image: url('../images/myimages/nuclear-background.jpg');
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+  }
+  .statsContainer {
+    top: 0px;
+  }
+  .game-container {
+    width: 100vw;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .timer {
+    font-size: 12px;
+    align-content: flex-start;
+  }
+  .timer-main {
+    height: 15px;
+    width: 200px;
+  }
+  .timer-container {
+    height: 49px;
+    z-index: 2;
+  }
+  .headerTitle {
+    font-size: 26px;
+  }
+  .sc-cardback {
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+    z-index: 1;
+    background-image: url('../images/myimages/sc2-logo.png');
+    background-position: center;
+    background-size: cover;
+    right: 0%;
+  }
+  .card {
+    padding: 0;
+    box-sizing: border-box;
+    width: 50px;
+    height: 75px;
+    border: 1px solid rgba(75, 158, 212, 0.6);
+  }
+  .battlecruiser,
+  .firebat,
+  .ghost,
+  .marauder,
+  .marine,
+  .medivac,
+  .reaper,
+  .tank,
+  .thor {
+    width: 100%;
+    height: 75px;
+    background-position: center;
+    background-size: cover;
+  }
+  .main-stats {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .games-played,
+  .games-played-count,
+  .attempts,
+  .attempts-count,
+  .accuracy,
+  .accuracy-percentage {
+    color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: lightblue;
+    font-size: 12px;
+    height: 35px;
+  }
 }
