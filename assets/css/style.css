@@ -1,8 +1,12 @@
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-} */
+.parent-container {
+  background-image: url('../images/myimages/sc2background.jpg');
+  background-size: cover;
+}
+
+.header {
+  border: 2px solid rgba(75, 158, 212, 0.6);
+  color: whitesmoke;
+}
 
 .sc-cardback:hover {
   color: #fdec6e;
