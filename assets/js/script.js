@@ -12,7 +12,8 @@ var shuffleArray = [];
 function initializeApp() {
   shuffleCards();
   $('.sc-cardback').click(handleCardClick);
-  $('.modal-button').click(function () {
+  $('.modal').addClass('hidden');
+  $('.modal').click(function () {
     $('.modal').addClass('hidden');
     $('.sc-cardback').removeClass('hidden');
     $('.sc-cardback').addClass('visible');
