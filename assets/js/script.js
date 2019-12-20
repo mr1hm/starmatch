@@ -21,6 +21,7 @@ function initializeApp() {
     $('.attempts-count').text(0);
     $('.accuracy-percentage').text(0);
   })
+  $('.modal-button').click(resetStats);
   audioCue();
   // $('.card').shuffle();
 }
