@@ -23,7 +23,6 @@ function initializeApp() {
   })
   $('.modal-button').click(resetStats);
   audioCue();
-  // $('.card').shuffle();
 }
 
 function handleCardClick(event) {
@@ -48,7 +47,6 @@ function displayStats() {
 function matchCheck() {
   console.log('# of matches:', matches);
   if (matches === max_matches) {
-    // $('.modal').modal('show');
     $('.modal').removeClass('hidden');
     $('.game-container').addClass('avoid-clicks');
   }
@@ -95,12 +93,7 @@ function cardsClicked() {
   if (matches === max_matches) {
     games_played++;
     displayStats();
-    // resetStats();
   }
-  // IF TWO CARDS DON'T MATCH, YOU CAN FREELY CHECK OTHER CARDS, AND WHEN THEY MATCH, IT WILL KEEP THE UNMATCHED CARDS REVEALED!!
-  // MAYBE WE CAN USE A clearTimeout FUNCTION HERE TO PREVENT CHEATING!!!
-  // INSTEAD OF A clearTimeout, I ended up adding a class called avoid-clicks and using (pointer events: none) in CSS.
-    // This will prevent any pointer events such as clicks to not register.
 }
 
 function resetStats() {
@@ -109,8 +102,6 @@ function resetStats() {
   $('.sc-cardback').click(handleCardClick);
   matches = null;
   attempts = null;
-  //$('.sc-cardback').removeClass('visible');
-  // $('.card').shuffle();
 }
 
 function audioCue() {
@@ -148,28 +139,3 @@ function shuffleCards(){
     shuffleArray.splice(randomNum, 1);
   }
 }
-//   for (var i = 0; i < shuffleArray.length; i++) {
-
-//   }
-// }
-
-// (function($){
-//   $.fn.shuffle = function() {
-//     var allElements = this.get(),
-//         getRandom = function(max) {
-//           console.log(max);
-//           return Math.floor(Math.random() * max);
-//         },
-//         shuffled = $.map(allElements, function(){
-//           var random = getRandom(allElements.length),
-//               randomElement = $(allElements[random]).clone(true)[0];
-//               console.log(randomElement);
-//           allElements.splice(random, 1);
-//           return randomElement;
-//         });
-//       this.each(function(i){
-//         $(this).replaceWith($(shuffled[i]));
-//       });
-//       return $(shuffled);
-//   };
-// })(jQuery);
