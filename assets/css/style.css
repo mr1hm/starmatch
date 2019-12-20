@@ -7,6 +7,8 @@ html, body {
 .parent-container {
   background-image: url('../images/myimages/sc2background.jpg');
   background-size: cover;
+  height: 100vh;
+  width: 100vw;
 }
 
 .header {
