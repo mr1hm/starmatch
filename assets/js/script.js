@@ -45,7 +45,6 @@ function displayStats() {
 }
 
 function matchCheck() {
-  console.log('# of matches:', matches);
   if (matches === max_matches) {
     $('.modal').removeClass('hidden');
     $('.game-container').addClass('avoid-clicks');
@@ -61,7 +60,6 @@ function cardsClicked() {
 
   secondCardClicked = target;
   if (firstCardClicked.siblings().css('background-image') === secondCardClicked.siblings().css('background-image') && firstCardClicked.parent().get(0) !== secondCardClicked.parent().get(0)) {
-    console.log(firstCardClicked.parent().get(0), secondCardClicked.parent().get(0), firstCardClicked.parent().get(0) !== secondCardClicked.parent().get(0));
     $('.sc-cardback').addClass('avoid-clicks');
     $('.game-container').css('background-color', 'rgba(75, 140, 212, 0.6)');
     matches++;
@@ -97,7 +95,6 @@ function cardsClicked() {
 }
 
 function resetStats() {
-  console.log('hi');
   shuffleCards();
   $('.sc-cardback').click(handleCardClick);
   matches = null;
