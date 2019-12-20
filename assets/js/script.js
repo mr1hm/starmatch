@@ -95,7 +95,7 @@ function cardsClicked() {
   if (matches === max_matches) {
     games_played++;
     displayStats();
-    resetStats();
+    // resetStats();
   }
   // IF TWO CARDS DON'T MATCH, YOU CAN FREELY CHECK OTHER CARDS, AND WHEN THEY MATCH, IT WILL KEEP THE UNMATCHED CARDS REVEALED!!
   // MAYBE WE CAN USE A clearTimeout FUNCTION HERE TO PREVENT CHEATING!!!
@@ -104,6 +104,9 @@ function cardsClicked() {
 }
 
 function resetStats() {
+  console.log('hi');
+  shuffleCards();
+  $('.sc-cardback').click(handleCardClick);
   matches = null;
   attempts = null;
   //$('.sc-cardback').removeClass('visible');
