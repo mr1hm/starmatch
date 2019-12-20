@@ -45,7 +45,9 @@ function displayStats() {
 }
 
 function matchCheck() {
+  console.log('# of matches:', matches);
   if (matches === max_matches) {
+    // $('.modal').modal('show');
     $('.modal').removeClass('hidden');
     $('.game-container').addClass('avoid-clicks');
   }
