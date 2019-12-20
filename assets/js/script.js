@@ -71,7 +71,7 @@ function cardsClicked() {
     matchCheck();
     setTimeout(function() {
       $('.sc-cardback').removeClass('avoid-clicks');
-      $('.game-container').css('background-color', 'rgba(0, 0, 0, 0.4');
+      $('.game-container').css('background-color', 'rgba(0, 0, 0, 0');
       isItAMatch = false;
     }, 2000);
     } else if (firstCardClicked.siblings().css('background-image') !== secondCardClicked.siblings().css('background-image')) {
@@ -85,7 +85,7 @@ function cardsClicked() {
       secondCardClicked.removeClass('hidden');
       secondCardClicked = null;
       $('.sc-cardback').removeClass('avoid-clicks');
-      $('.game-container').css('background-color', 'rgba(0, 0, 0, 0.4');
+      $('.game-container').css('background-color', 'rgba(0, 0, 0, 0');
     }, 2000)
   }
   if (matches === max_matches) {
