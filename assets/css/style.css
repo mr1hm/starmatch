@@ -240,6 +240,7 @@ body {
   } */
   .statsSections {
     height: 100%;
+    margin-right: 0;
   }
   .stats-title {
     font-size: 20px;
@@ -345,6 +346,7 @@ body {
   }
   .statsSections {
     height: 100%;
+    margin-right: 0;
   }
   .parent-container {
     background-position: center;
@@ -448,6 +450,7 @@ body {
   }
   .statsSections {
     height: 100%;
+    margin-right: 0;
   }
   .parent-container {
     background-position: center;
