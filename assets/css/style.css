@@ -219,7 +219,6 @@ body {
   visibility: hidden;
   opacity: 0;
   transition: visibility 1s 1.5s, opacity 0.75s linear;
-  /* display: none; */
 }
 
 .visible {
