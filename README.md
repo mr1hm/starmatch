@@ -27,10 +27,10 @@ StarMatch
 - Create a copy on your local machine:
   - Fork this repository to your github
   - Clone this repository to your computer
-  - Open the starmatch directory/folder
+  - Open the starmatch directory
   - Open the index.html file in a browser
   - Have Fun!
 
 ## How To Play
 - Just click on a card and try to match a second card with the same image!
-- Statistics are shown on the left
+- Statistics are shown on the bottom
