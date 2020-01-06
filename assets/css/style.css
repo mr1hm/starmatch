@@ -177,6 +177,7 @@ body {
   background-image: url('../images/myimages/sc2-logo.png');
   background-position: center;
   background-size: cover;
+  transition: transform .2s;
 }
 
 .battlecruiser {
