@@ -226,9 +226,14 @@ body {
 
 /*-------------------------------------------------------------------
 
-                        10. RESPONSIVE
+                           RESPONSIVE
 
 -------------------------------------------------------------------*/
+@media (min-width: 1024px) and (orientation: landscape) {
+  .orientation-warning {
+    display: none;
+  }
+}
 
 @media (max-width: 812px) and (orientation: landscape) {
   .statsSections {
@@ -329,6 +334,9 @@ body {
     background-color: lightblue;
     font-size: 12px;
     height: 35px;
+  }
+  .orientation-warning {
+    display: none;
   }
 }
 
@@ -433,6 +441,9 @@ body {
     font-size: 12px;
     height: 35px;
   }
+  .orientation-warning {
+    display: none;
+  }
 }
 
 @media (max-width: 667px) and (orientation: landscape) {
@@ -532,6 +543,9 @@ body {
     font-size: 12px;
     height: 35px;
   }
+  .orientation-warning {
+    display: none;
+  }
 }
 
 @media (max-width: 568px) and (orientation: landscape) {
@@ -629,5 +643,77 @@ body {
     background-color: lightblue;
     font-size: 12px;
     height: 35px;
+  }
+  .orientation-warning {
+    display: none;
+  }
+}
+
+@media (min-width: 320px) and (orientation: portrait) {
+  html, body {
+    width: 100%;
+    height: 100%;
+  }
+  .orientation-warning {
+    color: white;
+  }
+  .parent-container {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .modal {
+    display: none;
+  }
+  .statsContainer {
+    display: none;
+  }
+  .game-container {
+    display: none;
+  }
+  .timer {
+    display: none;
+  }
+  .timer-label {
+    display: none;
+  }
+  .timer-main {
+    display: none;
+  }
+  .timer-container {
+    display: none;
+  }
+  .headerTitle {
+    font-size: 26px;
+  }
+  .sc-cardback {
+    display: none;
+  }
+  .card {
+    display: none;
+  }
+  .battlecruiser,
+  .firebat,
+  .ghost,
+  .marauder,
+  .marine,
+  .medivac,
+  .reaper,
+  .tank,
+  .thor {
+    display: none;
+  }
+  .main-stats {
+    display: none;
+  }
+  .games-played,
+  .games-played-count,
+  .attempts,
+  .attempts-count,
+  .accuracy,
+  .accuracy-percentage {
+    display: none;
   }
 }
