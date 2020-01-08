@@ -17,6 +17,7 @@ function initializeApp() {
     $('.modal').addClass('hidden');
     $('.sc-cardback').removeClass('hidden');
     $('.sc-cardback').addClass('visible');
+    $('.sc-cardback').next().removeClass('hidden');
     $('.game-container').removeClass('avoid-clicks');
     $('.attempts-count').text(0);
     $('.accuracy-percentage').text(0);
