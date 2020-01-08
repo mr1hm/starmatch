@@ -159,6 +159,23 @@ body {
   background-size: cover;
 }
 
+.battlecruiser-still,
+.firebat-still,
+.ghost-still,
+.marauder-still,
+.marine-still,
+.medivac-still,
+.reaper-still,
+.tank-still,
+.thor-still {
+  position: absolute;
+  width: 125px;
+  height: 150px;
+  background-position: center;
+  background-size: cover;
+  margin-left: 71px;
+}
+
 .modal {
   display: block;
   z-index: 3;
