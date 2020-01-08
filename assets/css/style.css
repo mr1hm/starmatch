@@ -204,40 +204,85 @@ body {
   transition: transform .2s;
 }
 
+.battlecruiser-still {
+  background-image: url('../images/myimages/battlecruiser.jpg');
+  border: 1px solid white;
+}
 .battlecruiser {
   background-image: url('../images/myimages/battlecruiser.gif');
+  border: 1px solid white;
 }
 
+.firebat-still {
+  background-image: url('../images/myimages/firebat.jpg');
+  border: 1px solid white;
+}
 .firebat {
   background-image: url('../images/myimages/firebat.gif');
+  border: 1px solid white;
 }
 
+.ghost-still {
+  background-image: url('../images/myimages/ghost.jpg');
+  border: 1px solid white;
+}
 .ghost {
   background-image: url('../images/myimages/ghost.gif');
+  border: 1px solid white;
 }
 
+.marauder-still {
+  background-image: url('../images/myimages/marauder.jpg');
+  border: 1px solid white;
+}
 .marauder {
   background-image: url('../images/myimages/marauder.gif');
+  border: 1px solid white;
 }
 
+.marine-still {
+  background-image: url('../images/myimages/marine.jpg');
+  border: 1px solid white;
+}
 .marine {
   background-image: url('../images/myimages/marine.gif');
+  border: 1px solid white;
 }
 
+.medivac-still {
+  background-image: url('../images/myimages/medivac.jpg');
+  border: 1px solid white;
+}
 .medivac {
   background-image: url('../images/myimages/medivac.gif');
+  border: 1px solid white;
 }
 
+.reaper-still {
+  background-image: url('../images/myimages/reaper.jpg');
+  border: 1px solid white;
+}
 .reaper {
   background-image: url('../images/myimages/reaper.gif');
+  border: 1px solid white;
 }
 
+.tank-still {
+  background-image: url('../images/myimages/tank.jpg');
+  border: 1px solid white;
+}
 .tank {
   background-image: url('../images/myimages/tank.gif');
+  border: 1px solid white;
 }
 
+.thor-still {
+  background-image: url('../images/myimages/thor.jpg');
+  border: 1px solid white;
+}
 .thor {
   background-image: url('../images/myimages/thor.gif');
+  border: 1px solid white;
 }
 
 .hidden {
