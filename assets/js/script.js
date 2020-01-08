@@ -62,6 +62,8 @@ function cardsClicked() {
   if (firstCardClicked.siblings().css('background-image') === secondCardClicked.siblings().css('background-image') && firstCardClicked.parent().get(0) !== secondCardClicked.parent().get(0)) {
     $('.sc-cardback').addClass('avoid-clicks');
     $('.game-container').css('background-color', 'rgba(75, 140, 212, 0.6)');
+    firstCardClicked.next().addClass('hidden');
+    secondCardClicked.next().addClass('hidden');
     matches++;
     attempts++;
     isItAMatch = true;
