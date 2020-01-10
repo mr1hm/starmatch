@@ -202,6 +202,7 @@ body {
   background-position: center;
   background-size: cover;
   transition: transform .2s;
+  cursor: pointer;
 }
 
 .battlecruiser-still {
