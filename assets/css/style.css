@@ -21,7 +21,6 @@ html, body {
 }
 
 .sc-cardback:hover {
-  /* box-shadow: 0 0 25px 10px #fff; */
   animation: pulse 1s infinite alternate;
   z-index: 9;
   color: #fdec6e;
@@ -149,7 +148,6 @@ body {
 .reaper,
 .tank,
 .thor {
-  /* margin-left: 71px; */
   width: 125px;
   height: 150px;
   background-position: center;
@@ -170,7 +168,6 @@ body {
   height: 150px;
   background-position: center;
   background-size: cover;
-  /* margin-left: 71px; */
 }
 
 .modal {
@@ -696,8 +693,6 @@ body {
     background-size: cover;
     width: 100%;
     height: 100%;
-    /* height: 100vh;
-    width: 100vw; */
   }
   .modal {
     z-index: 9;
