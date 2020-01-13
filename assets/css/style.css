@@ -307,6 +307,25 @@ body {
   .orientation-warning {
     display: none;
   }
+  .games-played,
+  .games-played-count,
+  .attempts,
+  .attempts-count,
+  .accuracy,
+  .accuracy-percentage {
+    color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    text-align: center;
+    background-color: lightblue;
+    margin-bottom: 2px;
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 812px) and (orientation: landscape) {
