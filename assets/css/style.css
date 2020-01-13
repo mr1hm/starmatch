@@ -414,6 +414,21 @@ body {
     background-position: center;
     background-size: cover;
   }
+  .battlecruiser-still,
+  .firebat-still,
+  .ghost-still,
+  .marauder-still,
+  .marine-still,
+  .medivac-still,
+  .reaper-still,
+  .tank-still,
+  .thor-still {
+    margin-left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+  }
   .games-played,
   .games-played-count,
   .attempts,
